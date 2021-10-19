@@ -1,0 +1,40 @@
+
+    <div id="marco">
+        <h1 align="center">CONTACTA</h1>
+        <form [formGroup]="contactForm" (ngSubmit)="onSaveForm()">
+            <p id="subirN">Nombre</p>
+            <input id="subirInputN" type="text" formControlName="name" placeholder="">
+            <div id="subirInputN" class="container-error-message" *ngIf="name?.errors?.required">
+                Name is required.
+            </div>
+            <div id="subirInputN" class="container-error-message" *ngIf="name?.errors?.minlength">
+                Name must be at least 3 caracters long.
+            </div>
+            <p id="subirE">Email</p>
+            <input id="subirInputE" type="text" formControlName="email" placeholder="">
+            <div id="subirInputE" class="container-error-message" *ngIf="email?.errors?.required">
+                Email is required.
+            </div>
+            <div id="subirInputE" class="container-error-message" *ngIf="email?.errors?.minlength">
+                Email must be at least 5 caracters long.
+            </div>
+            <div id="subirInputE" class="container-error-message"
+                *ngIf="(email?.dirty || email?.touched) && email?.invalid && email?.errors?.pattern">
+                Value has to be a valid email adress
+            </div>
+            <p id="subirP">Pregunta</p>
+            <textarea id="subirInputP" formControlName="message" placeholder=""></textarea>
+            <div id="subirInputP" class="alert-danger" *ngIf="message?.invalid" && (message.dirty || message.touched)>
+                <div id="subirInputP" class="container-error-message" *ngIf="message?.errors?.required">
+                    Message is required.
+                </div>
+                <div id="subirInputP" class="container-error-message" *ngIf="message?.errors?.minlength">
+                    Message must be at least 5 caracters long.
+                </div>
+            </div>
+
+            <button id="btn" type="submit" class="btn btn-primary"> Enviar</button>
+        </form>
+    </div>
+    <p>Nuestro teléfono: 928652314</p>
+    <p>Nuestro email: madeinadia@company.com</p>

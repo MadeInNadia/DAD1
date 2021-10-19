@@ -1,0 +1,14 @@
+
+    #list {
+    background-color: azure;
+    height: 750px;
+    }
+    #list h3 {
+        padding: 10px;
+    }
+    .center {
+        text-align: center
+        }
+    #contacto{
+        font: 100% sans-serif;
+     }

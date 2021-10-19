@@ -1,0 +1,28 @@
+#marco {
+    background-color: #A9CCE3;
+    opacity: 0.9;
+    }
+#marco * {
+    padding: 10px;
+    
+}
+#menuperfil {
+    padding: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    opacity: 0.9;
+    }
+    #menuperfil li {
+    display: inline;
+    }
+    #logout{
+        font-family: Arial;
+        float: left;
+        padding: 10px;
+    }
+    #config{
+        font-family: Arial;
+        float: right;
+        padding: 10px;
+    }

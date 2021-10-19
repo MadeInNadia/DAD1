@@ -1,0 +1,27 @@
+<div id="marco">
+    <h1 id="centrarPalabra">Iniciar Sesión</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSaveForm()">
+        <p id="subir">Nombre de usuario</p>
+        <input id="subirInput" type="text" formControlName="username" placeholder="">
+        <div id="subirInput" class="container-error-message" *ngIf="name?.errors?.required">
+            Username is required.
+        </div>
+        <div id="subirInput" class="container-error-message" *ngIf="name?.errors?.minlength">
+            Username must be at least 5 caracters long.
+        </div>
+        <p id="subir">Contraseña</p>
+        <input id="subirInput" type="text" formControlName="password" placeholder="">
+        <div id="subirInput" class="container-error-message" *ngIf="email?.errors?.required">
+            Password is required.
+        </div>
+        <div id="subirInput" class="container-error-message" *ngIf="email?.errors?.minlength">
+            Password must be at least 5 caracters long.
+        </div>
+        <a routerLink="/perfil">
+            <button id="btn" type="submit" class="btn btn-primary" routerlink="/perfil"> Enviar</button>
+        </a>
+        <p style="color: blue;">Crear Cuenta</p>
+
+
+    </form>
+</div>
